@@ -1,0 +1,18 @@
+# Python 缓存
+__pycache__/
+*.py[cod]
+
+# C++ 编译产物
+main
+main.exe
+*.o
+
+# 虚拟环境
+.conda/
+env/
+venv/
+
+# 本地实验生成的庞大数据与图表
+results/
+*.csv
+*.pdf

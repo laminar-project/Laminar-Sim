@@ -1,0 +1,250 @@
+root@iZ0jl3r83zweqdyz8w3jttZ:~# cat benchmark_results.txt
+=== Test Run 1 ===
+High-Res Clock freq = 1000000000 ticks/sec
+Estimated TSC = 2.70 GHz
+
+=== A) Pure instruction style (throughput-ish, sanity check) ===
+Pure AVX2 andnot
+  cycles/op  avg 1.66, p50 1.66, p99 1.67
+  ns/op      avg 0.61, p50 0.61, p99 0.62
+Pure fast ln (bsr+LUT)
+  cycles/op  avg 7.10, p50 7.09, p99 7.14
+  ns/op      avg 2.63, p50 2.63, p99 2.64
+
+=== B) Micro-kernels (mapped to Laminar parameters) ===
+Mask micro-kernel: single-node mask update
+  cycles/op  avg 10.86, p50 10.86, p99 10.87
+  ns/op      avg 4.02, p50 4.02, p99 4.03
+Fastlog micro-kernel: single-node score
+  cycles/op  avg 37.72, p50 37.68, p99 38.09
+  ns/op      avg 13.97, p50 13.95, p99 14.11
+Gamma*H^3 micro-kernel: single-zone update
+  cycles/op  avg 79.10, p50 79.06, p99 79.47
+  ns/op      avg 29.30, p50 29.28, p99 29.44
+
+sink = 2892101599930
+
+=== Test Run 2 ===
+High-Res Clock freq = 1000000000 ticks/sec
+Estimated TSC = 2.70 GHz
+
+=== A) Pure instruction style (throughput-ish, sanity check) ===
+Pure AVX2 andnot
+  cycles/op  avg 1.66, p50 1.66, p99 1.67
+  ns/op      avg 0.61, p50 0.61, p99 0.62
+Pure fast ln (bsr+LUT)
+  cycles/op  avg 7.10, p50 7.09, p99 7.15
+  ns/op      avg 2.63, p50 2.63, p99 2.65
+
+=== B) Micro-kernels (mapped to Laminar parameters) ===
+Mask micro-kernel: single-node mask update
+  cycles/op  avg 10.87, p50 10.86, p99 10.88
+  ns/op      avg 4.02, p50 4.02, p99 4.03
+Fastlog micro-kernel: single-node score
+  cycles/op  avg 37.07, p50 37.03, p99 37.50
+  ns/op      avg 13.73, p50 13.72, p99 13.89
+Gamma*H^3 micro-kernel: single-zone update
+  cycles/op  avg 79.08, p50 79.05, p99 79.32
+  ns/op      avg 29.29, p50 29.28, p99 29.38
+
+sink = 2892101599930
+
+=== Test Run 3 ===
+High-Res Clock freq = 1000000000 ticks/sec
+Estimated TSC = 2.70 GHz
+
+=== A) Pure instruction style (throughput-ish, sanity check) ===
+Pure AVX2 andnot
+  cycles/op  avg 1.66, p50 1.66, p99 1.66
+  ns/op      avg 0.61, p50 0.61, p99 0.62
+Pure fast ln (bsr+LUT)
+  cycles/op  avg 7.09, p50 7.09, p99 7.12
+  ns/op      avg 2.63, p50 2.63, p99 2.64
+
+=== B) Micro-kernels (mapped to Laminar parameters) ===
+Mask micro-kernel: single-node mask update
+  cycles/op  avg 10.87, p50 10.86, p99 10.89
+  ns/op      avg 4.02, p50 4.02, p99 4.03
+Fastlog micro-kernel: single-node score
+  cycles/op  avg 37.55, p50 37.53, p99 37.87
+  ns/op      avg 13.91, p50 13.90, p99 14.03
+Gamma*H^3 micro-kernel: single-zone update
+  cycles/op  avg 79.10, p50 79.08, p99 79.50
+  ns/op      avg 29.30, p50 29.29, p99 29.44
+
+sink = 2892101599930
+
+=== Test Run 4 ===
+High-Res Clock freq = 1000000000 ticks/sec
+Estimated TSC = 2.70 GHz
+
+=== A) Pure instruction style (throughput-ish, sanity check) ===
+Pure AVX2 andnot
+  cycles/op  avg 1.66, p50 1.66, p99 1.66
+  ns/op      avg 0.61, p50 0.61, p99 0.62
+Pure fast ln (bsr+LUT)
+  cycles/op  avg 7.10, p50 7.09, p99 7.14
+  ns/op      avg 2.63, p50 2.63, p99 2.64
+
+=== B) Micro-kernels (mapped to Laminar parameters) ===
+Mask micro-kernel: single-node mask update
+  cycles/op  avg 10.87, p50 10.86, p99 10.88
+  ns/op      avg 4.02, p50 4.02, p99 4.03
+Fastlog micro-kernel: single-node score
+  cycles/op  avg 36.51, p50 36.47, p99 37.17
+  ns/op      avg 13.52, p50 13.51, p99 13.77
+Gamma*H^3 micro-kernel: single-zone update
+  cycles/op  avg 79.10, p50 79.06, p99 79.26
+  ns/op      avg 29.30, p50 29.28, p99 29.36
+
+sink = 2892101599930
+
+=== Test Run 5 ===
+High-Res Clock freq = 1000000000 ticks/sec
+Estimated TSC = 2.70 GHz
+
+=== A) Pure instruction style (throughput-ish, sanity check) ===
+Pure AVX2 andnot
+  cycles/op  avg 1.66, p50 1.66, p99 1.66
+  ns/op      avg 0.61, p50 0.61, p99 0.62
+Pure fast ln (bsr+LUT)
+  cycles/op  avg 7.10, p50 7.09, p99 7.15
+  ns/op      avg 2.63, p50 2.63, p99 2.65
+
+=== B) Micro-kernels (mapped to Laminar parameters) ===
+Mask micro-kernel: single-node mask update
+  cycles/op  avg 10.87, p50 10.87, p99 10.88
+  ns/op      avg 4.02, p50 4.02, p99 4.03
+Fastlog micro-kernel: single-node score
+  cycles/op  avg 36.35, p50 36.32, p99 36.78
+  ns/op      avg 13.46, p50 13.45, p99 13.62
+Gamma*H^3 micro-kernel: single-zone update
+  cycles/op  avg 79.11, p50 79.07, p99 79.27
+  ns/op      avg 29.30, p50 29.29, p99 29.36
+
+sink = 2892101599930
+
+=== Test Run 6 ===
+High-Res Clock freq = 1000000000 ticks/sec
+Estimated TSC = 2.70 GHz
+
+=== A) Pure instruction style (throughput-ish, sanity check) ===
+Pure AVX2 andnot
+  cycles/op  avg 1.66, p50 1.66, p99 1.67
+  ns/op      avg 0.61, p50 0.61, p99 0.62
+Pure fast ln (bsr+LUT)
+  cycles/op  avg 7.09, p50 7.09, p99 7.12
+  ns/op      avg 2.63, p50 2.63, p99 2.64
+
+=== B) Micro-kernels (mapped to Laminar parameters) ===
+Mask micro-kernel: single-node mask update
+  cycles/op  avg 10.86, p50 10.86, p99 10.88
+  ns/op      avg 4.02, p50 4.02, p99 4.03
+Fastlog micro-kernel: single-node score
+  cycles/op  avg 36.56, p50 36.53, p99 37.14
+  ns/op      avg 13.54, p50 13.53, p99 13.75
+Gamma*H^3 micro-kernel: single-zone update
+  cycles/op  avg 79.11, p50 79.07, p99 79.99
+  ns/op      avg 29.30, p50 29.29, p99 29.63
+
+sink = 2892101599930
+
+=== Test Run 7 ===
+High-Res Clock freq = 1000000000 ticks/sec
+Estimated TSC = 2.70 GHz
+
+=== A) Pure instruction style (throughput-ish, sanity check) ===
+Pure AVX2 andnot
+  cycles/op  avg 1.67, p50 1.66, p99 1.83
+  ns/op      avg 0.62, p50 0.61, p99 0.68
+Pure fast ln (bsr+LUT)
+  cycles/op  avg 7.10, p50 7.09, p99 7.21
+  ns/op      avg 2.63, p50 2.63, p99 2.67
+
+=== B) Micro-kernels (mapped to Laminar parameters) ===
+Mask micro-kernel: single-node mask update
+  cycles/op  avg 10.86, p50 10.86, p99 10.88
+  ns/op      avg 4.02, p50 4.02, p99 4.03
+Fastlog micro-kernel: single-node score
+  cycles/op  avg 37.45, p50 37.40, p99 38.18
+  ns/op      avg 13.87, p50 13.85, p99 14.14
+Gamma*H^3 micro-kernel: single-zone update
+  cycles/op  avg 79.10, p50 79.08, p99 79.40
+  ns/op      avg 29.30, p50 29.29, p99 29.41
+
+sink = 2892101599930
+
+=== Test Run 8 ===
+High-Res Clock freq = 1000000000 ticks/sec
+Estimated TSC = 2.70 GHz
+
+=== A) Pure instruction style (throughput-ish, sanity check) ===
+Pure AVX2 andnot
+  cycles/op  avg 1.66, p50 1.66, p99 1.66
+  ns/op      avg 0.61, p50 0.61, p99 0.62
+Pure fast ln (bsr+LUT)
+  cycles/op  avg 7.10, p50 7.09, p99 7.12
+  ns/op      avg 2.63, p50 2.63, p99 2.64
+
+=== B) Micro-kernels (mapped to Laminar parameters) ===
+Mask micro-kernel: single-node mask update
+  cycles/op  avg 10.86, p50 10.86, p99 10.88
+  ns/op      avg 4.02, p50 4.02, p99 4.03
+Fastlog micro-kernel: single-node score
+  cycles/op  avg 36.51, p50 36.48, p99 37.00
+  ns/op      avg 13.52, p50 13.51, p99 13.70
+Gamma*H^3 micro-kernel: single-zone update
+  cycles/op  avg 79.08, p50 79.08, p99 79.27
+  ns/op      avg 29.29, p50 29.29, p99 29.36
+
+sink = 2892101599930
+
+=== Test Run 9 ===
+High-Res Clock freq = 1000000000 ticks/sec
+Estimated TSC = 2.70 GHz
+
+=== A) Pure instruction style (throughput-ish, sanity check) ===
+Pure AVX2 andnot
+  cycles/op  avg 1.68, p50 1.66, p99 1.77
+  ns/op      avg 0.62, p50 0.61, p99 0.66
+Pure fast ln (bsr+LUT)
+  cycles/op  avg 7.10, p50 7.09, p99 7.14
+  ns/op      avg 2.63, p50 2.63, p99 2.64
+
+=== B) Micro-kernels (mapped to Laminar parameters) ===
+Mask micro-kernel: single-node mask update
+  cycles/op  avg 10.87, p50 10.87, p99 10.88
+  ns/op      avg 4.02, p50 4.02, p99 4.03
+Fastlog micro-kernel: single-node score
+  cycles/op  avg 37.34, p50 37.30, p99 38.00
+  ns/op      avg 13.83, p50 13.81, p99 14.07
+Gamma*H^3 micro-kernel: single-zone update
+  cycles/op  avg 79.10, p50 79.07, p99 79.30
+  ns/op      avg 29.30, p50 29.29, p99 29.37
+
+sink = 2892101599930
+
+=== Test Run 10 ===
+High-Res Clock freq = 1000000000 ticks/sec
+Estimated TSC = 2.70 GHz
+
+=== A) Pure instruction style (throughput-ish, sanity check) ===
+Pure AVX2 andnot
+  cycles/op  avg 1.66, p50 1.66, p99 1.67
+  ns/op      avg 0.61, p50 0.61, p99 0.62
+Pure fast ln (bsr+LUT)
+  cycles/op  avg 7.10, p50 7.09, p99 7.13
+  ns/op      avg 2.63, p50 2.63, p99 2.64
+
+=== B) Micro-kernels (mapped to Laminar parameters) ===
+Mask micro-kernel: single-node mask update
+  cycles/op  avg 10.87, p50 10.86, p99 10.89
+  ns/op      avg 4.02, p50 4.02, p99 4.03
+Fastlog micro-kernel: single-node score
+  cycles/op  avg 36.94, p50 36.89, p99 37.47
+  ns/op      avg 13.68, p50 13.66, p99 13.88
+Gamma*H^3 micro-kernel: single-zone update
+  cycles/op  avg 79.13, p50 79.09, p99 79.38
+  ns/op      avg 29.31, p50 29.29, p99 29.40
+
+sink = 2892101599930
